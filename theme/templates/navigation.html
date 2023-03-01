@@ -4,9 +4,9 @@
         <span class="hidden">Close</span>
     </a>
     <ul role="menubar">
-        <li class="nav-current" role="presentation"><a  href="/" itemprop="name" itemprop="significantLink">Home</a></li>
+        <li class="nav-current" role="presentation"><a  href="{{ SITEURL }}" itemprop="name" itemprop="significantLink">Home</a></li>
         {% for p in pages|sort(attribute="sort_order") %}
-            <li class="nav-current" role="presentation"><a  href="{{ p.url }}" itemprop="name" itemprop="significantLink">{{ p.title }}</a></li>
+            <li class="nav-current" role="presentation"><a  href="{{ SITEURL }}{{ p.url }}" itemprop="name" itemprop="significantLink">{{ p.title }}</a></li>
         {% endfor %}
             <!-- <li class="nav-current" role="presentation"><a  href="{{ SITEURL }}/archives.html" title="{{ SITENAME }} | Archives" itemprop="name" itemprop="significantLink">Archives</a></li>         -->
     </ul>
